@@ -13,6 +13,9 @@ pic = pygame.transform.scale(pic, (screen_width, screen_height))
 bird = Bird(300, 300)
 start_flag = False
 
+flag = True
+
+
 
 while True:
   
@@ -37,9 +40,14 @@ while True:
   #bird.increase_bird()
         
       
-      
+    
   screen.blit(pic, (0, 0))
+  
+  
   bird.generate_bird(screen)
+  bird.create_obstacles(screen)
+  #flag = False
+  
   
   pygame.display.update()
 
