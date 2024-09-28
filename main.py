@@ -9,6 +9,7 @@ screen = pygame.display.set_mode((screen_width, screen_height))
 pic = pygame.image.load('background.png')
 pic = pygame.transform.scale(pic, (screen_width, screen_height))
 
+font = pygame.font.SysFont(None, 48)
 
 bird = Bird(300, 300)
 start_flag = False
@@ -46,6 +47,7 @@ while True:
   
   bird.generate_bird(screen)
   bird.create_obstacles(screen)
+  bird.draw_score(screen, font)
   #flag = False
   
   
